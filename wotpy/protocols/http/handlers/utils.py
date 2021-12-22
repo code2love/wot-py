@@ -14,8 +14,10 @@ APPLICATION_JSON = "application/json"
 
 class WoTHttpBaseHandler(RequestHandler):
     def set_default_headers(self):
-        self.set_header("Access-Control-Allow-Origin", "*")
-        self.set_header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
+        self.set_header('Access-Control-Allow-Origin', "*")
+        self.set_header('Access-Control-Allow-Methods', "*")
+        self.set_header('Access-Control-Allow-Credentials', "true")
+        self.set_header('Access-Control-Allow-Headers', "Content-Type, Authorization")
         self.set_header('Access-Control-Max-Age', 1000)
 
 def get_exposed_thing(server, thing_name):
