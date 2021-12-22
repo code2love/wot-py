@@ -19,7 +19,7 @@ import wotpy.protocols.http.handlers.utils as handler_utils
 
 
 # noinspection PyAbstractClass,PyAttributeOutsideInit
-class ActionInvokeHandler(RequestHandler):
+class ActionInvokeHandler(handler_utils.WoTHttpBaseHandler):
     """Handler for Action invocation requests."""
 
     # noinspection PyMethodOverriding
@@ -39,7 +39,7 @@ class ActionInvokeHandler(RequestHandler):
 
 
 # noinspection PyAbstractClass,PyAttributeOutsideInit
-class PendingInvocationHandler(RequestHandler):
+class PendingInvocationHandler(handler_utils.WoTHttpBaseHandler):
     """Handler to check the status of pending action invocations."""
 
     # noinspection PyMethodOverriding

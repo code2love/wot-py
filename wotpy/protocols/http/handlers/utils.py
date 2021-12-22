@@ -8,9 +8,15 @@ Request handler for Property interactions.
 import json
 
 from tornado.web import HTTPError
+from tornado.web import RequestHandler
 
 APPLICATION_JSON = "application/json"
 
+class WoTHttpBaseHandler(RequestHandler):
+    def set_default_headers(self):
+        self.set_header("Access-Control-Allow-Origin", "*")
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
+        self.set_header('Access-Control-Max-Age', 1000)
 
 def get_exposed_thing(server, thing_name):
     """Utility function to retrieve an ExposedThing

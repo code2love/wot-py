@@ -15,7 +15,7 @@ import wotpy.protocols.http.handlers.utils as handler_utils
 
 
 # noinspection PyAbstractClass,PyAttributeOutsideInit
-class EventObserverHandler(RequestHandler):
+class EventObserverHandler(handler_utils.WoTHttpBaseHandler):
     """Handler for Event subscription requests."""
 
     # noinspection PyMethodOverriding

@@ -15,7 +15,7 @@ import wotpy.protocols.http.handlers.utils as handler_utils
 
 
 # noinspection PyAbstractClass
-class PropertyReadWriteHandler(RequestHandler):
+class PropertyReadWriteHandler(handler_utils.WoTHttpBaseHandler):
     """Handler for Property get/set requests."""
 
     # noinspection PyMethodOverriding,PyAttributeOutsideInit
@@ -40,7 +40,7 @@ class PropertyReadWriteHandler(RequestHandler):
 
 
 # noinspection PyAbstractClass,PyAttributeOutsideInit
-class PropertyObserverHandler(RequestHandler):
+class PropertyObserverHandler(handler_utils.WoTHttpBaseHandler):
     """Handler for Property subscription requests."""
 
     # noinspection PyMethodOverriding
