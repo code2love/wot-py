@@ -14,7 +14,7 @@ APPLICATION_JSON = "application/json"
 
 class WoTHttpBaseHandler(RequestHandler):
     def set_default_headers(self):
-        self.set_header('Access-Control-Allow-Origin', "*")
+        self.set_header('Access-Control-Allow-Origin', "http://localhost:3000")
         self.set_header('Access-Control-Allow-Methods', "PUT, GET, POST, OPTIONS, DELETE")
         self.set_header('Access-Control-Allow-Credentials', "true")
         self.set_header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, X-PINGOTHER")
