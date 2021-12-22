@@ -35,8 +35,8 @@ def get_argument(req_handler, name, default=None):
     Interprets the body as JSON if the Content-Type is application/json.
     Reverts to the default Tornado get_argument otherwise."""
 
-    if req_handler.request.headers.get("Content-Type") != APPLICATION_JSON:
-        return req_handler.get_argument(name, default)
+    #if req_handler.request.headers.get("Content-Type") != APPLICATION_JSON:
+    #    return req_handler.get_argument(name, default)
 
     try:
         parsed_body = json.loads(req_handler.request.body)
