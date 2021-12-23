@@ -1,3 +1,5 @@
+I created this fork because for a little web-application I needed to make cross origin requests. In the original version of WoTPy it was not possible to set the corresponding CORS headers programatically. Also, this version is less strict about the content type, it also allows 'text/plain' for example.
+
 > :warning: Please note that this project is currently behind the current version of the W3C WoT specifications. Our intention is to get it up to speed and implement the latest Thing Description and Scripting API versions. However, we cannot provide a timeframe for this update.
 
 # WoTPy
